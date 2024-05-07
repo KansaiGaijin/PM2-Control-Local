@@ -1,0 +1,9 @@
+{
+  "name": "pm2-control-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js application to control PM2 services",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pm2": "^5.3.1"
+  }
+}

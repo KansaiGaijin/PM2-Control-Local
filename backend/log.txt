@@ -1,0 +1,522 @@
+[
+    {
+        "Name": "bridge",
+        "Id": "42c1c67e6b4d9a04f05f96e16c9fd101f4570d1ebe63212fdc5d2199a4ee5c98",
+        "Created": "2024-05-07T19:37:25.813147433+12:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "0648fed6daadeb1022129fdfd329af0fc5d79bfa8f8847f99cca1d865e1d909d": {
+                "Name": "paperless-dbeaver-1",
+                "EndpointID": "64395c07111cd1fef57966dd084930836a671be5bac08755f0628650cd60e5c5",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+[
+    {
+        "Name": "docker_arr_network",
+        "Id": "9eb761acf8a51303b1ec7987f50434e068cb35ee810247d86dc7d4250e28dc86",
+        "Created": "2024-04-13T22:31:41.583528548+12:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.20.0.0/16",
+                    "Gateway": "172.20.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "03b90a9bd4b528ef5abeaf04c074403a06aee387f0340bc52bcbb09741598da1": {
+                "Name": "jellyseerr",
+                "EndpointID": "26cb1aa7ff5db737ca73e1fb397d6863e5802926dba0041673e353911e9489ec",
+                "MacAddress": "02:42:ac:14:00:0e",
+                "IPv4Address": "172.20.0.14/16",
+                "IPv6Address": ""
+            },
+            "121afb33278d9d333b77382c2157eee95cb2a8a415e9c9996232d8bd1c910fcd": {
+                "Name": "prowlarr",
+                "EndpointID": "a10d06f46e539220aee3eee7e021fcc34132e26e3e9a2fd45aae8b4f39e5b0d8",
+                "MacAddress": "02:42:ac:14:00:0b",
+                "IPv4Address": "172.20.0.11/16",
+                "IPv6Address": ""
+            },
+            "65216699410c111e6eb1e3ef1bfd2247b83888b90b79d6e6af5613ae5093e8d3": {
+                "Name": "radarr",
+                "EndpointID": "391481b2dbb926335846e47110237689c93fdb70f41051d8062520a278a6858a",
+                "MacAddress": "02:42:ac:14:00:0c",
+                "IPv4Address": "172.20.0.12/16",
+                "IPv6Address": ""
+            },
+            "6d8840ae68805bea4fbd237e3871228bba3f6568ca70328e6c8ea48239044a45": {
+                "Name": "qbittorrent",
+                "EndpointID": "b5ca482f0948e77851753fc69f7b9cd0db27761cf7c6485cbb19308e76a9220b",
+                "MacAddress": "02:42:ac:14:00:0d",
+                "IPv4Address": "172.20.0.13/16",
+                "IPv6Address": ""
+            },
+            "96bf757528d0151eb86554b50737335ee7409020ecc7a81de1d1ed3db5226785": {
+                "Name": "bazarr",
+                "EndpointID": "c5ea381973b499b2e70d297d90325f4bbdd772230cf00867eb6667c8380b41e9",
+                "MacAddress": "02:42:ac:14:00:02",
+                "IPv4Address": "172.20.0.2/16",
+                "IPv6Address": ""
+            },
+            "cae2718462fc1c9e88ef9fe3aab34bdf7e41b34a5b4df27651819fd7d2177128": {
+                "Name": "sonarr",
+                "EndpointID": "888608d6f46a4b8bf435f208fb8d031206cd20d474803993546a868751f6a08f",
+                "MacAddress": "02:42:ac:14:00:0a",
+                "IPv4Address": "172.20.0.10/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "arr_network",
+            "com.docker.compose.project": "docker",
+            "com.docker.compose.version": "2.24.7"
+        }
+    }
+]
+[
+    {
+        "Name": "docker_default",
+        "Id": "089a43e0160f1de9d8ffbfac25a59601a85183c5c4f566ddf7862bce55876607",
+        "Created": "2023-11-04T19:53:49.91174566+13:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "3cfeed253be68c04b30c2a9298a3be90cc7f4c6e7e1ee58cdaa772149eb28c18": {
+                "Name": "jellyfin",
+                "EndpointID": "f7ba76d48c117b5acbbe2ca2ab5e5a374bdd005ee7a17d197519f90d46c2fff3",
+                "MacAddress": "02:42:ac:12:00:05",
+                "IPv4Address": "172.18.0.5/16",
+                "IPv6Address": ""
+            },
+            "592d239508639abe5aff8ceb85a60590a36e22e287b56ec209e9d24d8910b484": {
+                "Name": "homepage",
+                "EndpointID": "5878a4ec2c205ab9480fe3fbb162dff561209af7eb74c7e738d8548ccaa356dd",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "84c7cb6b20167aa0bbaffae86c373d12df630aa7438b2a4e9c3b03d0bd030c2d": {
+                "Name": "portainer",
+                "EndpointID": "50a6ec45eaee28924da35c16e0dd1ff03c2829fbb104ad06acf7214a0a178a4a",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "adb3db5d3e0f7b309caac4fa3ff59ac676c8b8f4f4d68541681143924e2ce9e1": {
+                "Name": "adguardhome",
+                "EndpointID": "cee0fb761f9d1351733295c483ae413972d7bab141be7be12b3448e6bf3f3d60",
+                "MacAddress": "02:42:ac:12:00:04",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "docker",
+            "com.docker.compose.version": "2.21.0"
+        }
+    }
+]
+[
+    {
+        "Name": "host",
+        "Id": "593b450eaa73bb67dfdb38ed45d2a51cbf0eee05109e49c5859b5fca61f8d750",
+        "Created": "2023-11-04T18:53:10.603373442+13:00",
+        "Scope": "local",
+        "Driver": "host",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": null
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+[
+    {
+        "Name": "kuma_default",
+        "Id": "b26d1807878a2ed44e62e3ca0d15e28033661b916a1851211a36016c48e4e14e",
+        "Created": "2023-11-09T20:19:47.678421003+13:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "efe76c744df2d4cd4a07221a99468d56f0d3402caae27ef9a567a82961e3c75b": {
+                "Name": "Kuma",
+                "EndpointID": "7637c21bedf3f7564aa27cdfc99d2537a5ee1e64d9b8741578a6e9a7a25f460c",
+                "MacAddress": "02:42:ac:13:00:02",
+                "IPv4Address": "172.19.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "kuma",
+            "com.docker.compose.version": "2.21.0"
+        }
+    }
+]
+[
+    {
+        "Name": "none",
+        "Id": "621904a73eadaa01d1aceb62c469e6a48631ae6b9c618652d09dd7403a517ed1",
+        "Created": "2023-11-04T18:53:10.473483705+13:00",
+        "Scope": "local",
+        "Driver": "null",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": null
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {}
+    }
+]
+[
+    {
+        "Name": "paperless_default",
+        "Id": "c8c834e4269e3e521fcf2861840290aa60d4d4f6ed7d92b72728f24d4477e909",
+        "Created": "2024-04-21T13:18:37.926271956+12:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.21.0.0/16",
+                    "Gateway": "172.21.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "01feffa767ff29fd258132023692622303933a72d2c3cb3c0c305f8954828976": {
+                "Name": "pma",
+                "EndpointID": "892b498d347073637fe9063f2de5a786f1fc08a3f13b5dc6b197e0e0aa90a833",
+                "MacAddress": "02:42:ac:15:00:03",
+                "IPv4Address": "172.21.0.3/16",
+                "IPv6Address": ""
+            },
+            "0648fed6daadeb1022129fdfd329af0fc5d79bfa8f8847f99cca1d865e1d909d": {
+                "Name": "paperless-dbeaver-1",
+                "EndpointID": "e559d873e62ee871ce73e321c33bd4d450f59869e905fb0e982c27b298ab8b64",
+                "MacAddress": "02:42:ac:15:00:08",
+                "IPv4Address": "172.21.0.8/16",
+                "IPv6Address": ""
+            },
+            "8b77b46589c3693f736e24567ed10b2e131c97bea48b4cdb87fe2b3edf3ff551": {
+                "Name": "paperless-tika-1",
+                "EndpointID": "471d03e31eeb5e425c5453277435ddbf30ba0059f78e9fb3e91f3d73cd7109eb",
+                "MacAddress": "02:42:ac:15:00:02",
+                "IPv4Address": "172.21.0.2/16",
+                "IPv6Address": ""
+            },
+            "aed0f597520a525df925d03deef20f7c78530e3fe09cc021a556fe7accf67199": {
+                "Name": "paperless-db-1",
+                "EndpointID": "b7d0ea35daa3056729ff05ad98b8b30f2045358860291988ad18607abd0d5068",
+                "MacAddress": "02:42:ac:15:00:07",
+                "IPv4Address": "172.21.0.7/16",
+                "IPv6Address": ""
+            },
+            "b8859bdc29a0bd0f0e30302d9f51341eb5545a50b2c3496a3466e190ea5d4d24": {
+                "Name": "paperless-webserver-1",
+                "EndpointID": "8cabe77d951fb88f4daf10caa238a36d70f0a7d292a836ae55cba192644f62ae",
+                "MacAddress": "02:42:ac:15:00:04",
+                "IPv4Address": "172.21.0.4/16",
+                "IPv6Address": ""
+            },
+            "c4166b82723560849d7eb4f0bb51a2fa20b8d1d2d47795bf84b593310dae080f": {
+                "Name": "paperless-broker-1",
+                "EndpointID": "f324b9b3f298e3bc1a6d28c62579f989e260914e7250a389c2fe805d47f2fdee",
+                "MacAddress": "02:42:ac:15:00:06",
+                "IPv4Address": "172.21.0.6/16",
+                "IPv6Address": ""
+            },
+            "e189872b0c07f827aaa0d265aa5891bc3cb9e6fac013eb020744fba2de30869d": {
+                "Name": "paperless-gotenberg-1",
+                "EndpointID": "7779ac421c07496c4d7baea4b9bba6dffa8d9b28ac6e8112493167499fbacc8a",
+                "MacAddress": "02:42:ac:15:00:05",
+                "IPv4Address": "172.21.0.5/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "paperless",
+            "com.docker.compose.version": "2.24.7"
+        }
+    }
+]
+[
+    {
+        "Name": "pm2-control-app_foundry",
+        "Id": "2bca10ff13879b8ea4460326416b1348bde6cb23c5e8df979d36c4a0aeeda344",
+        "Created": "2024-05-07T18:56:10.647963172+12:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.40.0.0/24",
+                    "Gateway": "172.40.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "0880343389c67a01c4841a46cd8bbca116959b399d6753264a8e4fb171875160": {
+                "Name": "pm2-control-backend",
+                "EndpointID": "d96fc2311e1b276dbf40a15b500fe36d2f168e5e29e215fc5ff0ecf32e6b25df",
+                "MacAddress": "02:42:ac:28:00:03",
+                "IPv4Address": "172.40.0.3/24",
+                "IPv6Address": ""
+            },
+            "61c2bb24b558566858dd8e1541f8bcc188004271888ef69e0b971d5ab91681d4": {
+                "Name": "pm2-control-front",
+                "EndpointID": "f3bc63619e029c07fef7b140cec562a36c4a29d3fb39f8e9b35b6b81add56d09",
+                "MacAddress": "02:42:ac:28:00:02",
+                "IPv4Address": "172.40.0.2/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "foundry",
+            "com.docker.compose.project": "pm2-control-app",
+            "com.docker.compose.version": "2.27.0"
+        }
+    }
+]
+[
+    {
+        "Name": "pterodactyl_nw",
+        "Id": "172fb96c30ab4104da9fade230c9a6d84be00e9daadae14c61b30cc7187ba3bc",
+        "Created": "2024-05-06T02:16:24.248239055+12:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": true,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.30.0.0/16",
+                    "Gateway": "172.30.0.1"
+                },
+                {
+                    "Subnet": "fdba:17c8:6c94::/64",
+                    "Gateway": "fdba:17c8:6c94::1011"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "false",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "pterodactyl0",
+            "com.docker.network.driver.mtu": "1500",
+            "encryption": "false"
+        },
+        "Labels": {}
+    }
+]
+[
+    {
+        "Name": "wordpress_default",
+        "Id": "a533c55dd278a3b535f8b4ea0d23af6b9f9e1979a6052df0b1a09c5bc973d38e",
+        "Created": "2024-03-18T21:34:23.770221728+13:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.23.0.0/16",
+                    "Gateway": "172.23.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "01feffa767ff29fd258132023692622303933a72d2c3cb3c0c305f8954828976": {
+                "Name": "pma",
+                "EndpointID": "b47e7558286d93f385d4ac9ee5fc8db7358d0caf591fefc6cf0e42b873cbc766",
+                "MacAddress": "02:42:ac:17:00:05",
+                "IPv4Address": "172.23.0.5/16",
+                "IPv6Address": ""
+            },
+            "0648fed6daadeb1022129fdfd329af0fc5d79bfa8f8847f99cca1d865e1d909d": {
+                "Name": "paperless-dbeaver-1",
+                "EndpointID": "69639c80b43e3061bacd06d6704e4c9586819d1f4a538189e8e91b34f601c769",
+                "MacAddress": "02:42:ac:17:00:06",
+                "IPv4Address": "172.23.0.6/16",
+                "IPv6Address": ""
+            },
+            "44e7c6f348a9e6e89da2d4b226595a9f05969ae54e7d860f9814fc2d184ba997": {
+                "Name": "wordpress-wordpress-1",
+                "EndpointID": "26aeff30f7c1510213e945e188651909c78cc7b6122eaadd6cff32fe8f0b6821",
+                "MacAddress": "02:42:ac:17:00:04",
+                "IPv4Address": "172.23.0.4/16",
+                "IPv6Address": ""
+            },
+            "4b300d41966ffd7e469a2c6d4e6a96c48ddce4dbbb887783119b5ad8ff58128c": {
+                "Name": "wordpress-mariadb-1",
+                "EndpointID": "394a2f19e2fd975f402b20a5d1c64263d0021cc85b08dfb3e89d6b36bc55ae87",
+                "MacAddress": "02:42:ac:17:00:03",
+                "IPv4Address": "172.23.0.3/16",
+                "IPv6Address": ""
+            },
+            "d1b500b3c382b01bbd85820a673e436c413c5fd7626f1e3c2dc02ab1b6f68a43": {
+                "Name": "wordpress-dolibarr-1",
+                "EndpointID": "70c62535db5855c07116957a12c58d00b81952b317e37e56207844b94dbde4d9",
+                "MacAddress": "02:42:ac:17:00:02",
+                "IPv4Address": "172.23.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "wordpress",
+            "com.docker.compose.version": "2.24.7"
+        }
+    }
+]

@@ -1,0 +1,24 @@
+NAMES                   PORTS
+pm2-control-front       0.0.0.0:14000->80/tcp, :::14000->80/tcp
+pm2-control-backend     3000/tcp, 0.0.0.0:14001->3100/tcp, :::14001->3100/tcp
+homepage                0.0.0.0:7575->3000/tcp, :::7575->3000/tcp
+bazarr                  0.0.0.0:6767->6767/tcp, :::6767->6767/tcp
+sonarr                  0.0.0.0:8989->8989/tcp, :::8989->8989/tcp
+prowlarr                0.0.0.0:9696->9696/tcp, :::9696->9696/tcp
+radarr                  0.0.0.0:7878->7878/tcp, :::7878->7878/tcp
+jellyseerr              0.0.0.0:5055->5055/tcp, :::5055->5055/tcp
+Kuma                    0.0.0.0:3010->3001/tcp, :::3010->3001/tcp
+wordpress-dolibarr-1    0.0.0.0:8998->80/tcp, :::8998->80/tcp
+paperless-webserver-1   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp
+paperless-dbeaver-1     0.0.0.0:8978->8978/tcp, :::8978->8978/tcp
+paperless-gotenberg-1   3000/tcp
+paperless-broker-1      6379/tcp
+paperless-tika-1        9998/tcp
+paperless-db-1          5432/tcp
+qbittorrent             0.0.0.0:56881->6881/tcp, 0.0.0.0:56881->6881/udp, :::56881->6881/tcp, :::56881->6881/udp, 0.0.0.0:7070->8080/tcp, :::7070->8080/tcp
+wordpress-wordpress-1   0.0.0.0:8880->80/tcp, :::8880->80/tcp
+pma                     0.0.0.0:8881->80/tcp, :::8881->80/tcp
+wordpress-mariadb-1     3306/tcp
+adguardhome             67-68/udp, 0.0.0.0:53->53/udp, :::53->53/udp, 443/udp, 0.0.0.0:53->53/tcp, :::53->53/tcp, 853/udp, 0.0.0.0:853->853/tcp, :::853->853/tcp, 443/tcp, 3000/udp, 5443/tcp, 0.0.0.0:3000->3000/tcp, 0.0.0.0:784->784/udp, :::3000->3000/tcp, :::784->784/udp, 5443/udp, 6060/tcp, 0.0.0.0:83->80/tcp, :::83->80/tcp
+portainer               8000/tcp, 9000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp
+jellyfin                0.0.0.0:8096->8096/tcp, :::8096->8096/tcp, 8920/tcp

@@ -1,0 +1,26 @@
+services:
+  pm2-control-front:
+    container_name: pm2-control-frontend
+    build: ./frontend
+    ports:
+      - "14000:80"
+    restart: unless-stopped
+    networks:
+        foundry:
+            ipv4_address: 172.40.0.2
+
+  pm2-control-backend:
+    container_name: pm2-control-backend
+    build: ./backend
+    ports:
+      - "14001:3100"
+    restart: unless-stopped
+    networks:
+        foundry:
+            ipv4_address: 172.40.0.3
+
+networks:
+  foundry:
+    ipam:
+      config:
+        - subnet: 172.40.0.0/24
