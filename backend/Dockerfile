@@ -23,7 +23,7 @@ RUN echo "lsof -i :3100" > /usr/src/app/startup.sh
 RUN chmod +x /usr/src/app/startup.sh
 
 # Expose port
-EXPOSE 3000
+EXPOSE 3100
 
 # Command to run the application
 CMD ["/bin/bash", "-c", "/usr/src/app/startup.sh && pm2-runtime app.js"]
